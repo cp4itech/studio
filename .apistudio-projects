@@ -1,6 +1,6 @@
 projects:
-  gitProject:
+  EMEAgitProject:
     description: a project storing assets in github
     tags:
       - github
-    lastUpdated: 1771501264488
+    lastUpdated: 1771501281262
