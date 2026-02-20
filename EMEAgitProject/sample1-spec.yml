@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  title: sample1
+  version: 1.0.0
+  description: a simple api
+  contact:
+    name: msit
+servers:
+  - url: https://httpbin.org
+    description: our simple back-end
+paths:
+  /get:
+    summary: ''
+    description: ''
+    get:
+      responses: {}

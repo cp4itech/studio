@@ -1,0 +1,14 @@
+openapi: 3.0.1
+info:
+  title: findBranches
+  version: a.b.c
+  contact:
+    name: msit
+servers:
+  - url: https://sample-api.us-east-a.apiconnect.automation.ibm.com
+paths:
+  /bank/branches:
+    summary: ''
+    description: ''
+    get:
+      responses: {}
