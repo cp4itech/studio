@@ -1,6 +1,1 @@
-projects:
-  EMEAgitProject:
-    description: a project storing assets in github enabling re-use
-    tags:
-      - github
-    lastUpdated: 1771501320474
+projects: {}
