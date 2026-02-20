@@ -13,4 +13,6 @@ paths:
     summary: ''
     description: ''
     get:
-      responses: {}
+      responses:
+        '200':
+          description: ''

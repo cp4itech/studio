@@ -1,0 +1,13 @@
+kind: CORS
+apiVersion: api.ibm.com/v1
+metadata:
+  name: samplecors
+  namespace: EMEAgitProject
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  rules:
+    - action: allow
+      originList:
+        - '*'
