@@ -13,6 +13,8 @@ paths:
       responses:
         '200':
           description: OK
+      security:
+        - clientID: []
   /sensitive:
     summary: ''
     description: ''
@@ -20,6 +22,8 @@ paths:
       responses:
         '200':
           description: OK
+      security:
+        - clientID: []
   /api:
     summary: ''
     description: ''
@@ -27,5 +31,14 @@ paths:
       responses:
         '200':
           description: OK
+      security:
+        - clientID: []
 servers:
   - url: https://randomuser.me
+components:
+  securitySchemes:
+    clientID:
+      name: X-IBM-Client-Id
+      in: header
+      description: ''
+      type: apiKey
