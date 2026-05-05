@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: generateUser
+  version: '1.0'
+  contact:
+    email: msit@ch.ibm.com
+  description: this randomly creates a user with a lot of - supposedly - personal details
+paths:
+  /xml:
+    summary: ''
+    description: ''
+    get:
+      responses:
+        '200':
+          description: OK
+  /sensitive:
+    summary: ''
+    description: ''
+    get:
+      responses:
+        '200':
+          description: OK
+  /api:
+    summary: ''
+    description: ''
+    get:
+      responses:
+        '200':
+          description: OK
+servers:
+  - url: https://randomuser.me

@@ -1,0 +1,24 @@
+kind: CORS
+apiVersion: api.ibm.com/v1
+metadata:
+  name: cors
+  namespace: EMEAmsitExperimental
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  rules:
+    - action: allow
+      originList:
+        - '*'
+      allowCredentials: false
+      allowMethods:
+        - GET
+        - POST
+        - OPTIONS
+        - HEAD
+        - DELETE
+        - PUT
+      allowHeaders:
+        - '*'
+      maxAge: 0

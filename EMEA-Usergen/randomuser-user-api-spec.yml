@@ -1,0 +1,118 @@
+openapi: 3.0.0
+info:
+  title: random-user-api
+  description: API for generating random users
+  version: 1.0.0
+paths:
+  /api:
+    get:
+      summary: Returns a random user or a list of random users
+      description: Returns a random user or a list of random users based on query parameters
+      parameters:
+        - name: results
+          in: query
+          description: Number of users to return
+          schema:
+            type: integer
+        - name: seed
+          in: query
+          description: Seed for generating users
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsersResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      operationId: returns-random-user-list-random-users
+components:
+  schemas:
+    Name:
+      type: object
+      properties:
+        title:
+          type: string
+        first:
+          type: string
+        last:
+          type: string
+    Location:
+      type: object
+      properties:
+        street:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        postcode:
+          type: string
+        coordinates:
+          type: object
+          properties:
+            latitude:
+              type: string
+            longitude:
+              type: string
+        timezone:
+          type: object
+          properties:
+            offset:
+              type: string
+            description:
+              type: string
+    User:
+      type: object
+      properties:
+        gender:
+          type: string
+        name:
+          $ref: '#/components/schemas/Name'
+        location:
+          $ref: '#/components/schemas/Location'
+        email:
+          type: string
+        phone:
+          type: string
+        picture:
+          type: object
+          properties:
+            large:
+              type: string
+            medium:
+              type: string
+            thumbnail:
+              type: string
+    UsersResponse:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        info:
+          type: object
+          properties:
+            seed:
+              type: string
+            results:
+              type: integer
+            page:
+              type: integer
+            version:
+              type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string

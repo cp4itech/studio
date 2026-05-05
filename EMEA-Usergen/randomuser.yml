@@ -1,0 +1,122 @@
+kind: DataPowerAssembly
+apiVersion: api.ibm.com/v1
+metadata:
+  name: randomuser
+  namespace: EMEAmsitExperimental
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - datapower
+spec:
+  x-ibm-configuration:
+    enforced: true
+    testable: true
+    phase: realized
+    gateway: datapower-api-gateway
+    assembly:
+      execute:
+        - operation-switch:
+            version: 2.0.0
+            title: operation-switch
+            case:
+              - operations:
+                  - verb: get
+                    path: /xml
+                execute:
+                  - invoke:
+                      version: 2.3.0
+                      title: invoke
+                      backend-type: detect
+                      header-control:
+                        type: blocklist
+                        values: []
+                      parameter-control:
+                        type: allowlist
+                        values: []
+                      http-version: HTTP/1.1
+                      timeout: 60
+                      verb: keep
+                      chunked-uploads: true
+                      persistent-connection: true
+                      cache-response: protocol
+                      cache-ttl: 900
+                      websocket-upgrade: false
+                      graphql-send-type: detect
+                      target-url: https://randomuser.me/api
+                  - parse:
+                      version: 2.2.0
+                      title: parse
+                      parse-settings-reference:
+                        default: apic-default-parsesettings
+                  - json-to-xml:
+                      version: 2.0.0
+                      title: json-to-xml
+                      root-element-name: json
+                      always-output-root-element: false
+                      unnamed-element-name: element
+              - operations:
+                  - verb: get
+                    path: /api
+                execute:
+                  - invoke:
+                      version: 2.3.0
+                      title: invoke
+                      backend-type: detect
+                      header-control:
+                        type: blocklist
+                        values: []
+                      parameter-control:
+                        type: allowlist
+                        values: []
+                      http-version: HTTP/1.1
+                      timeout: 60
+                      verb: keep
+                      chunked-uploads: true
+                      persistent-connection: true
+                      cache-response: protocol
+                      cache-ttl: 900
+                      graphql-send-type: detect
+                      websocket-upgrade: false
+                      target-url: https://randomuser.me/api
+              - operations:
+                  - verb: get
+                    path: /sensitive
+                execute:
+                  - invoke:
+                      version: 2.3.0
+                      title: invoke
+                      backend-type: detect
+                      header-control:
+                        type: blocklist
+                        values: []
+                      parameter-control:
+                        type: allowlist
+                        values: []
+                      http-version: HTTP/1.1
+                      timeout: 60
+                      verb: keep
+                      chunked-uploads: true
+                      persistent-connection: true
+                      cache-response: protocol
+                      cache-ttl: 900
+                      graphql-send-type: detect
+                      websocket-upgrade: false
+                      target-url: https://randomuser.me/api
+                  - parse:
+                      version: 2.2.0
+                      title: parse
+                      parse-settings-reference:
+                        default: apic-default-parsesettings
+                  - redact:
+                      version: 2.0.0
+                      title: redact
+                      redactions:
+                        - path: message.body.**.password
+                          action: redact
+                          from: []
+            otherwise: []
+    activity-log:
+      enabled: true
+      success-content: activity
+      error-content: payload

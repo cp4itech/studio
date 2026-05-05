@@ -1,0 +1,10 @@
+kind: Plan
+apiVersion: api.ibm.com/v1
+metadata:
+  name: low-use
+  namespace: EMEAmsitExperimental
+  version: '1.0'
+  tags: []
+spec:
+  qos:
+    withQuota: {}
