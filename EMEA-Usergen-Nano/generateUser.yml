@@ -2,14 +2,10 @@ kind: API
 apiVersion: api.ibm.com/v1
 metadata:
   name: generateUser
-  namespace: EMEAmsitExperimental
+  namespace: EMEA-Usergen-Nano
   version: '1.0'
   tags: []
   type: REST
 spec:
   api-spec:
     $path: ./generateUser-spec.yml
-  policy-sequence:
-    - $ref: EMEAmsitExperimental:randomuser:1.0
-  cors:
-    $ref: EMEAmsitExperimental:cors:1.0
