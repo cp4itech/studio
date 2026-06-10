@@ -1,0 +1,25 @@
+kind: test
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test-branches
+  namespace: EMEA-Testcases
+  version: "1.0"
+  tags: []
+spec:
+  api:
+    $endpoint: https://rgw.apic-1ea39f2197613090e80c4981ab6eab96-0000.eu-de.containers.appdomain.cloud/apic/cms-idg-nano/sample-api.us-east-a.apiconnect.automation.ibm.com
+  request:
+    - method: GET
+      resource: /bank/branches
+      headers:
+        - key: X-IBM-Client-Id
+          value: 3537d94dda9f4ef728101b7992a44944
+      auth:
+        noauth: true
+      parameters: []
+      assertions:
+        - $ref: EMEA-Testcases:response code:1.0
+        - $ref: EMEA-Testcases:content-type:1.0
+      var: []
+  environment:
+    $ref: EMEA-Testcases:c1app2:1.0
