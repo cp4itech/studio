@@ -13,7 +13,7 @@ spec:
       resource: /bank/branches
       headers:
         - key: X-IBM-Client-Id
-          value: 3537d94dda9f4ef728101b7992a44944
+          value: ${clientIDc1app2}
       auth:
         noauth: true
       parameters: []
@@ -22,4 +22,4 @@ spec:
         - $ref: EMEA-Testcases:content-type:1.0
       var: []
   environment:
-    $ref: EMEA-Testcases:c1app2:1.0
+    $ref: EMEA-Testcases:c2app1:1.0
