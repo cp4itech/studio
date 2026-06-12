@@ -7,9 +7,9 @@ metadata:
   tags: []
 spec:
   api:
-    $ref: EMEAmsitExperimental:generateUser:1.0
+    $endpoint: https://rgw.apic-1ea39f2197613090e80c4981ab6eab96-0000.eu-de.containers.appdomain.cloud/apic/cms-idg-nano/randomuser.me
   environment:
-    $ref: EMEA-Testcases:c1app1:1.0
+    $ref: EMEA-Testcases:testdetails:1.0
   request:
     - method: GET
       resource: /xml
@@ -29,14 +29,12 @@ spec:
       assertions:
         $ref: default:GET-sensitive-200:1.0
       var: []
-      skipped: true
     - method: GET
       resource: /api
       headers:
         - key: X-IBM-Client-Id
-          value: ${clientId}X-IBM-Client-Id_value}
+          value: ${clientId}
       parameters: []
       assertions:
         $ref: default:GET-api-200:1.0
       var: []
-      skipped: true
