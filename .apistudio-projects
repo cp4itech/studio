@@ -8,6 +8,6 @@ projects:
     tags: []
     lastUpdated: 1781095130590
   EMEAmsitAgentic:
-    description: ''
+    description: use this for MCP and LLMs
     tags: []
-    lastUpdated: 1781250636127
+    lastUpdated: 1781250673033
