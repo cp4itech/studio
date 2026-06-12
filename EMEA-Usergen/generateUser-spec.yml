@@ -42,3 +42,5 @@ components:
       in: header
       description: ''
       type: apiKey
+security:
+  - clientID: []
