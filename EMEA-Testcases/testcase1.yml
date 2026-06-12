@@ -22,4 +22,4 @@ spec:
         - $ref: EMEA-Testcases:content-type:1.0
       var: []
   environment:
-    $ref: EMEA-Testcases:c2app1:1.0
+    $ref: EMEA-Testcases:testdetails:1.0
