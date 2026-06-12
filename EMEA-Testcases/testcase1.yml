@@ -13,7 +13,7 @@ spec:
       resource: /bank/branches
       headers:
         - key: X-IBM-Client-Id
-          value: ${clientIDc1app2}
+          value: ${c1app2}
       auth:
         noauth: true
       parameters: []

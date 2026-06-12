@@ -1,7 +1,7 @@
 kind: environment
 apiVersion: api.ibm.com/v1
 metadata:
-  name: c1app1
+  name: testdetails
   version: "1.0"
   namespace: EMEA-Testcases
   tags: []
@@ -10,3 +10,6 @@ spec:
     - key: clientId
       isSecret: false
       value: 05ac74b27f27f943fca15fb2e987c352
+    - key: c1app2
+      isSecret: false
+      value: 3537d94dda9f4ef728101b7992a44944
