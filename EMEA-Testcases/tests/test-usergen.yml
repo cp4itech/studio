@@ -1,0 +1,40 @@
+kind: test
+apiVersion: api.ibm.com/v1
+metadata:
+  namespace: EMEA-Testcases
+  name: test-usergen
+  version: "1.0"
+  tags: []
+spec:
+  api:
+    $ref: EMEAmsitExperimental:generateUser:1.0
+  environment:
+    $ref: EMEA-Testcases:c1app1:1.0
+  request:
+    - method: GET
+      resource: /xml
+      headers:
+        - key: X-IBM-Client-Id
+          value: ${clientId}
+      parameters: []
+      assertions:
+        $ref: default:GET-xml-200:1.0
+      var: []
+    - method: GET
+      resource: /sensitive
+      headers:
+        - key: X-IBM-Client-Id
+          value: ${clientId}
+      parameters: []
+      assertions:
+        $ref: default:GET-sensitive-200:1.0
+      var: []
+    - method: GET
+      resource: /api
+      headers:
+        - key: X-IBM-Client-Id
+          value: ${clientId}X-IBM-Client-Id_value}
+      parameters: []
+      assertions:
+        $ref: default:GET-api-200:1.0
+      var: []
