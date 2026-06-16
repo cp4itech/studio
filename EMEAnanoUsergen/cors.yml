@@ -1,0 +1,19 @@
+kind: CORS
+apiVersion: api.ibm.com/v1
+metadata:
+  name: cors
+  namespace: EMEAnanoUsergen
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  rules:
+    - action: allow
+      originList:
+        - '*'
+      allowCredentials: false
+      allowMethods:
+        - GET
+      allowHeaders:
+        - '*'
+      maxAge: 0

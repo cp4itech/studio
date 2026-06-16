@@ -1,0 +1,15 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: randomuser
+  namespace: EMEAnanoUsergen
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: EMEAnanoUsergen:invoke-randomuser-1:1.0
+  monitoring:
+    $ref: EMEAnanoUsergen:telemetry-randomuser:1.0
