@@ -1,7 +1,7 @@
 kind: Invoke
 apiVersion: api.ibm.com/v1
 metadata:
-  name: invoke-randomuser-1
+  name: invoke-randomuser1
   namespace: EMEAnanoUsergen
   version: '1.0'
   tags: []
@@ -11,8 +11,10 @@ metadata:
 spec:
   endpoint:
     http:
-      verb: GET
       target:
         timeout: 30
         url: https://randomuser.me/api
         tlsClientProfile: tls-client-profile-default:1.0.0
+        urlType: plain
+        version: HTTP/2
+      verb: GET
