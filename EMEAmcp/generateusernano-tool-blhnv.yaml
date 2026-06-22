@@ -1,0 +1,23 @@
+kind: MCPTools
+apiVersion: api.ibm.com/v1
+metadata:
+  name: generateusernano-tool-blhnv
+  namespace: EMEAmcp
+  version: "1.0"
+  tags: []
+  description: API for generating random users
+spec:
+  tools:
+    - name: generate_user
+      description: This tool generates random user data for testing or simulation
+        purposes. 1. It can return a single random user. 2. It can generate a
+        list of random users based on query parameters.
+      inputSchema:
+        type: object
+        properties: {}
+      title: Returns a random user or a list of random users
+      x-api-binding:
+        operationPath: /api
+        operationMethod: GET
+        api:
+          $path: ./generateusernano-spec.yml

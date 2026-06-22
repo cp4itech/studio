@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "4cbb86cb-d9e9-4b97-9dab-b1fbf65a816f:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/generateusernano-spec.yml",
+      "docIndex": 0,
+      "assetType": "support",
+      "lastIndexed": 1782129817119,
+      "schemaVersion": 1
+    },
+    {
+      "id": "52f7d83b-84a2-4da0-bf83-176318b50de4:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/invoke-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817265,
+      "schemaVersion": 1,
+      "kind": "Invoke",
+      "name": "invoke-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "5bb42e4392df19b1"
+    },
+    {
+      "id": "8d08ba21-c11b-40e9-82a7-e1b569890073:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/emeamcp-freeflowpolicysequence-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817522,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "emeamcp-freeflowpolicysequence-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "34d84b285412b5c2"
+    },
+    {
+      "id": "aaf9bc9a-6ded-491c-82c9-1123dfa0a32a:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/telemetry-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817376,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "telemetry-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "781b3ed1e205b3c0"
+    },
+    {
+      "id": "ebf5fe89-4531-4b5b-9ff6-1503e8199dc9:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/generateusernano-tool-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817771,
+      "schemaVersion": 1,
+      "kind": "MCPTools",
+      "name": "generateusernano-tool-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "4a4f66918ec042dc"
+    },
+    {
+      "id": "ef13c52d-48ac-4149-ad03-388839ef16ab:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/emeamcp-quota-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817627,
+      "schemaVersion": 1,
+      "kind": "Quota",
+      "name": "emeamcp-quota-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "bdb6b7974deccd55"
+    },
+    {
+      "id": "fec00dbb-9e1e-4157-808d-f72250b6a4d1:0",
+      "projectId": "xHcS0IzB",
+      "filePath": "EMEAmcp/generateusernano-server-blhnv.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1782129817899,
+      "schemaVersion": 1,
+      "kind": "MCPServer",
+      "name": "generateusernano-server-blhnv",
+      "namespace": "EMEAmcp",
+      "version": "1.0",
+      "contentHash": "740e2160a07ce34c"
+    }
+  ],
+  "edges": [
+    {
+      "id": "2803b31d-3d60-44c5-8107-ff3f6021678a",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "fec00dbb-9e1e-4157-808d-f72250b6a4d1:0",
+      "targetNodeId": "8d08ba21-c11b-40e9-82a7-e1b569890073:0",
+      "targetRefType": "same-project",
+      "targetRefString": "EMEAmcp:emeamcp-freeflowpolicysequence-blhnv:1.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1782129817904,
+      "lastValidated": 1782129817904
+    },
+    {
+      "id": "392fbe19-77e0-485d-8fc1-f634ca571360",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "fec00dbb-9e1e-4157-808d-f72250b6a4d1:0",
+      "targetNodeId": "ebf5fe89-4531-4b5b-9ff6-1503e8199dc9:0",
+      "targetRefType": "same-project",
+      "targetRefString": "EMEAmcp:generateusernano-tool-blhnv:1.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1782129817904,
+      "lastValidated": 1782129817904
+    },
+    {
+      "id": "5052d58d-8689-47c5-a88c-8ce6f9e58d81",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "fec00dbb-9e1e-4157-808d-f72250b6a4d1:0",
+      "targetNodeId": "ef13c52d-48ac-4149-ad03-388839ef16ab:0",
+      "targetRefType": "same-project",
+      "targetRefString": "EMEAmcp:emeamcp-quota-blhnv:1.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1782129817904,
+      "lastValidated": 1782129817904
+    },
+    {
+      "id": "d287aa55-99ad-4692-9eb9-355ee1a9cfde",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "ebf5fe89-4531-4b5b-9ff6-1503e8199dc9:0",
+      "targetNodeId": "4cbb86cb-d9e9-4b97-9dab-b1fbf65a816f:0",
+      "targetRefType": "same-project",
+      "targetRefString": "./generateusernano-spec.yml",
+      "targetRefKind": "support",
+      "isValid": true,
+      "createdAt": 1782129817774,
+      "lastValidated": 1782129817774
+    },
+    {
+      "id": "d3c72af8-bddd-448b-a6ff-8be0cb995cb0",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "8d08ba21-c11b-40e9-82a7-e1b569890073:0",
+      "targetNodeId": "52f7d83b-84a2-4da0-bf83-176318b50de4:0",
+      "targetRefType": "same-project",
+      "targetRefString": "EMEAmcp:invoke-blhnv:1.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1782129817524,
+      "lastValidated": 1782129817524
+    },
+    {
+      "id": "f1c9de4d-7f42-47de-bfd9-2854585f7dc5",
+      "projectId": "xHcS0IzB",
+      "sourceNodeId": "8d08ba21-c11b-40e9-82a7-e1b569890073:0",
+      "targetNodeId": "aaf9bc9a-6ded-491c-82c9-1123dfa0a32a:0",
+      "targetRefType": "same-project",
+      "targetRefString": "EMEAmcp:telemetry-blhnv:1.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1782129817524,
+      "lastValidated": 1782129817524
+    }
+  ]
+}

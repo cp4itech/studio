@@ -1,0 +1,17 @@
+kind: MCPServer
+apiVersion: api.ibm.com/v1
+metadata:
+  name: generateusernano-server-blhnv
+  namespace: EMEAmcp
+  version: "1.0"
+  tags: []
+spec:
+  title: generateUserNano MCP Server
+  protocolVersion: V2025_11_25
+  quota:
+    $ref: EMEAmcp:emeamcp-quota-blhnv:1.0
+  policy-sequence:
+    - $ref: EMEAmcp:emeamcp-freeflowpolicysequence-blhnv:1.0
+  capabilities:
+    tools:
+      - $ref: EMEAmcp:generateusernano-tool-blhnv:1.0
