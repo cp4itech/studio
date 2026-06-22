@@ -1,0 +1,31 @@
+kind: OperationSwitch
+apiVersion: api.ibm.com/v1
+metadata:
+  name: OperationSwitch-qk3ze
+  namespace: EMEAllm
+  version: '1.0'
+  tags: []
+  domain: ai-platform
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  cases:
+    - conditions:
+        - verbPath:
+            path: /deployment-models
+            verb: GET
+      execute:
+        - $ref: EMEAllm:InvokeWatsonxModels-qk3ze:1.0
+    - conditions:
+        - verbPath:
+            path: /text-generate
+            verb: POST
+      execute:
+        - $ref: EMEAllm:InvokeWatsonxTextGen-qk3ze:1.0
+    - conditions:
+        - verbPath:
+            path: /tokenize
+            verb: POST
+      execute:
+        - $ref: EMEAllm:InvokeWatsonxTokenize-qk3ze:1.0

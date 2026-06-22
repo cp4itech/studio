@@ -1,0 +1,14 @@
+kind: Product
+apiVersion: api.ibm.com/v1
+metadata:
+  name: product-emeawxai-qk3ze
+  namespace: EMEAllm
+  version: '1.0'
+  tags: []
+  domain: ai-platform
+  description: ''
+spec:
+  apis:
+    - $ref: EMEAllm:api-emeawxai-qk3ze:1.0
+  plans:
+    - $ref: EMEAllm:plan-emeawxai-qk3ze:1.0

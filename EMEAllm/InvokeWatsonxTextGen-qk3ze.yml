@@ -1,0 +1,19 @@
+kind: InvokeWatsonxTextGen
+apiVersion: api.ibm.com/v1
+metadata:
+  name: InvokeWatsonxTextGen-qk3ze
+  namespace: EMEAllm
+  version: '1.0'
+  tags: []
+  domain: ai-platform
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  region: us-south
+  opVersion: placeholder-op-version
+  tlsClientProfile: tls-client-profile-default:1.0.0
+  projectId: ee6929b2-5f18-41c6-94bb-738abe064414
+  inputMessage: request
+  outputMessage: response
+  cachePolicy: disabled

@@ -1,0 +1,21 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: freeflowpolicysequence-emeawxai-qk3ze
+  namespace: EMEAllm
+  version: '1.0'
+  tags: []
+  domain: ai-platform
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: EMEAllm:ExtractIdentity-qk3ze:1.0
+    - $ref: EMEAllm:Authenticate-qk3ze:1.0
+    - $ref: EMEAllm:Authorize-qk3ze:1.0
+    - $ref: EMEAllm:IBMCloudLogin-qk3ze:1.0
+    - $ref: EMEAllm:Parse-qk3ze:1.0
+    - $ref: EMEAllm:OperationSwitch-qk3ze:1.0
+  monitoring:
+    $ref: EMEAllm:Telemetry-qk3ze:1.0
